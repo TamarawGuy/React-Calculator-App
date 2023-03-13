@@ -1,13 +1,130 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: -moz-linear-gradient(
+    133deg,
+    rgba(0, 188, 212, 1) 0%,
+    rgba(238, 130, 238, 1) 100%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(
+    133deg,
+    rgba(0, 188, 212, 1) 0%,
+    rgba(238, 130, 238, 1) 100%
+  );
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(
+    133deg,
+    rgba(0, 188, 212, 1) 0%,
+    rgba(238, 130, 238, 1) 100%
+  );
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EE82EE', endColorstr='#00BCD4', GradientType=0 );
+
+  /* ie 10+ */
+  background: -ms-linear-gradient(
+    133deg,
+    rgba(0, 188, 212, 1) 0%,
+    rgba(238, 130, 238, 1) 100%
+  );
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(
+    133deg,
+    rgba(0, 188, 212, 1) 0%,
+    rgba(238, 130, 238, 1) 100%
+  );
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.calculator {
+  width: 300px;
+  height: 350px;
+  margin: auto;
+  /* background-color: #f3f3f3; */
+  border: 1px solid #212427;
+  padding: 20px;
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(
+    133deg,
+    rgba(30, 60, 223, 1) 0%,
+    rgba(2, 4, 19, 1) 100%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(
+    133deg,
+    rgba(30, 60, 223, 1) 0%,
+    rgba(2, 4, 19, 1) 100%
+  );
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(
+    133deg,
+    rgba(30, 60, 223, 1) 0%,
+    rgba(2, 4, 19, 1) 100%
+  );
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#020413', endColorstr='#1E3CDF', GradientType=0 );
+
+  /* ie 10+ */
+  background: -ms-linear-gradient(
+    133deg,
+    rgba(30, 60, 223, 1) 0%,
+    rgba(2, 4, 19, 1) 100%
+  );
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(
+    133deg,
+    rgba(30, 60, 223, 1) 0%,
+    rgba(2, 4, 19, 1) 100%
+  );
+}
+
+.display {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input-field {
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 1.5em;
+}
+
+.output-field {
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 2em;
+}
+
+.btns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.5em;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #3e8e41;
 }
