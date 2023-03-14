@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Button from "./Button";
+import Display from "./Display";
 
 export default function Calculator() {
   const [input, setInput] = useState("");
@@ -40,15 +41,7 @@ export default function Calculator() {
 
   return (
     <div className="calculator">
-      <div className="display">
-        <input
-          type="text"
-          className="input-field"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
-        <input type="text" className="input-field" value={output} readOnly />
-      </div>
+      <Display input={input} setInput={setInput} output={output} />
 
       <div className="btns">
         <Button label="1" onClick={() => handleButtonClick("1")} />
